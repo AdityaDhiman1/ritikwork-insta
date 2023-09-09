@@ -1,0 +1,73 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="phones-screenshots">
+        <div class="main-image">
+          <img src="images/home-phones.png" alt="" />
+        </div>
+        <div class="screenshots">
+          <img id="screenshot" src="images/1.png" alt="" />
+        </div>
+      </div>
+      <div class="right-forms">
+        <div class="login-forms">
+          <form action="" method="post">
+            <div class="logo">
+              <img src="images/logo.png" alt="" />
+            </div>
+            <input
+              type="text"
+              name="username"
+              placeholder="Phone number, username, or email"
+            />
+            <input type="password" name="password" placeholder="Password" />
+            <button type="submit">Log in</button>
+          </form>
+
+          <div class="divider">
+            <hr />
+            OR
+            <hr />
+          </div>
+
+          <div class="login-facebook">
+            <img src="images/fb.png" alt="" />
+            Log in with Facebook
+          </div>
+          <div class="forgot">
+            <a href="#">Forgot password?</a>
+          </div>
+        </div>
+        <div class="create-account">
+          <span>Don't have a account? </span>
+          <a href="#">Sign up</a>
+        </div>
+        <div class="apps">
+          <p>Get the app.</p>
+          <div class="buttons">
+            <img src="images/google-play.png" alt="" />
+            <img src="images/microsoft.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let image = ["1.png", "2.png", "3.png", "4.png"];
+      window.addEventListener("load", () => { let i = 1; setInterval(() => {
+      screenshot.style.opacity = 0.1; setTimeout(() => {
+      screenshot.setAttribute("src", `images/${image[i]}`);
+      screenshot.style.opacity = 1; i = (i + 1) % image.length; }, 400); },
+      2400); });
+
+    </script>
+  </body>
+
+</html>
