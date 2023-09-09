@@ -11,4 +11,5 @@ const SignupScema = mongoose.Schema({
     }
 })
 
-export default mongoose.model('Signup', SignupScema)
+let signup =  mongoose.model('Signup', SignupScema)
+export default signup;
